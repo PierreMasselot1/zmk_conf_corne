@@ -32,10 +32,10 @@
             //                    | GUI | LWR | ALT/ENT |   | HYPER/SPC | BKSP  | RSE |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T      &kp Y      &kp U     &kp I      &kp O    &kp P            &kp ESC
-&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G      &kp H      &kp J     &kp K      &kp L    &lt 3 SEMICOLON  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B      &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH         &kp LEFT_ALT
-                         &kp LGUI  &mo 1  &kp RET    &kp SPACE  &kp BSPC  &mo 2
+&kp TAB     &kp Q  &kp W  &kp E     &kp R  &kp T      &kp Y      &kp U     &kp I      &kp O    &kp P            &kp ESC
+&kp LSHIFT  &kp A  &kp S  &kp D     &kp F  &kp G      &kp H      &kp J     &kp K      &kp L    &lt 3 SEMICOLON  &kp SQT
+&kp LCTRL   &kp Z  &kp X  &kp C     &kp V  &kp B      &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH         &kp LEFT_ALT
+                          &kp LGUI  &mo 1  &kp RET    &kp SPACE  &kp BSPC  &mo 2
             >;
         };
 
@@ -47,10 +47,10 @@
             //                     | GUI |     | ALT/ENT |   | HYPER/SPACE | BKSP |    |
 
             bindings = <
-&trans     &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSLH
-&trans     &kp N1    &kp N2  &kp N3    &kp N4    &kp N5       &kp MINUS  &kp EQUAL  &kp GRAVE        &kp LBKT  &kp RBKT  &kp PIPE
-&kp LSHFT  &kp N6    &kp N7  &kp N8    &kp N9    &kp N0       &kp UNDER  &kp PLUS   &kp TILDE        &kp LBRC  &kp RBRC  &kp RIGHT_ALT
-                             &kp LGUI  &trans    &kp RET      &kp SPACE  &kp BSPC   &trans
+&trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSLH
+&trans  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5       &kp MINUS  &kp EQUAL  &kp GRAVE        &kp LBKT  &kp RBKT  &kp PIPE
+&trans  &kp N6    &kp N7  &kp N8    &kp N9    &kp N0       &kp UNDER  &kp PLUS   &kp TILDE        &kp LBRC  &kp RBRC  &kp RIGHT_ALT
+                          &kp LGUI  &trans    &kp RET      &kp SPACE  &kp BSPC   &trans
             >;
         };
 
@@ -71,7 +71,7 @@
 
         System_layer {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &trans  &trans          &kp UP_ARROW  &trans     &trans  &trans
+&bt BT_CLR  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &trans  &kp HOME        &kp UP_ARROW  &kp END    &trans  &trans
 &trans      &trans        &trans        &trans        &trans        &trans          &trans  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &trans  &trans
 &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans          &trans        &trans     &trans  &trans
                                         &trans        &trans        &trans          &trans  &trans          &trans
