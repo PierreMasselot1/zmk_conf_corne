@@ -32,10 +32,10 @@
             //                    | GUI | LWR | ALT/ENT |   | HYPER/SPC | BKSP  | RSE |
 
             bindings = <
-&kp TAB     &kp Q  &kp W  &kp E     &kp R  &kp T      &kp Y      &kp U     &kp I      &kp O    &kp P            &kp ESC
-&kp LSHIFT  &kp A  &kp S  &kp D     &kp F  &kp G      &kp H      &kp J     &kp K      &kp L    &lt 3 SEMICOLON  &kp SQT
-&kp LCTRL   &kp Z  &kp X  &kp C     &kp V  &kp B      &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH         &kp LEFT_ALT
-                          &kp LGUI  &mo 1  &kp RET    &kp SPACE  &kp BSPC  &mo 2
+&kp TAB     &kp Q  &kp W  &kp E     &kp R  &kp T      &kp Y      &kp U                     &kp I      &kp O    &kp P            &kp ESC
+&kp LSHIFT  &kp A  &kp S  &kp D     &kp F  &kp G      &kp H      &kp J                     &kp K      &kp L    &lt 3 SEMICOLON  &kp SQT
+&kp LCTRL   &kp Z  &kp X  &kp C     &kp V  &kp B      &kp N      &kp M                     &kp COMMA  &kp DOT  &kp FSLH         &kp LEFT_ALT
+                          &kp LGUI  &mo 1  &kp RET    &kp SPACE  &mt LEFT_SHIFT BACKSPACE  &mo 2
             >;
         };
 
