@@ -32,15 +32,6 @@
         };
     };
 
-    macros {
-        accents: accents {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <>;
-            label = "ACCENTS";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
