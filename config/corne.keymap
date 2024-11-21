@@ -32,6 +32,16 @@
             bindings = <&bt BT_CLR>;
             key-positions = <4 5 7 6>;
         };
+
+        caps_word {
+            bindings = <&caps_word>;
+            key-positions = <16 19>;
+        };
+
+        capslock {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <15 20>;
+        };
     };
 
     keymap {
