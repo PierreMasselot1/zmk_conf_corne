@@ -25,6 +25,33 @@
             bindings = <&kp>, <&kp>;
         };
 
+        mmv_low: mmv_low {
+            compatible = "zmk,behavior-input-two-axis";
+            label = "MMV_LOW";
+            #binding-cells = <1>;
+            x-input-code = <20>;
+            y-input-code = <20>;
+            time-to-max-speed-ms = <0>;
+        };
+
+        mmv_med: mmv_med {
+            compatible = "zmk,behavior-input-two-axis";
+            label = "MMV_MED";
+            #binding-cells = <1>;
+            x-input-code = <50>;
+            y-input-code = <50>;
+            time-to-max-speed-ms = <0>;
+        };
+
+        mmv_high: mmv_high {
+            compatible = "zmk,behavior-input-two-axis";
+            label = "MMV_HIGH";
+            #binding-cells = <1>;
+            x-input-code = <75>;
+            y-input-code = <75>;
+            time-to-max-speed-ms = <0>;
+        };
+
         // Mouse movement
     };
 
