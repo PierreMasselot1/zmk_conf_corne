@@ -24,11 +24,8 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-    };
 
         // Mouse movement
-{
-    behaviors {
         mmv_low: mmv {
             compatible = "zmk,behavior-mouse-move";
             move-ms = <10>;
@@ -45,7 +42,6 @@
             speed = <10>;
         };
     };
-};
 
 
     combos {
