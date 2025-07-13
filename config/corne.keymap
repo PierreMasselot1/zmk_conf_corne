@@ -128,9 +128,9 @@
 
         mouse {
             bindings = <
-&trans  &trans  &trans  &mmv MOVE_X(-SPEED_HIGH) &mmv MOVE_X(SPEED_HIGH)   &trans    &trans  &mmv MOVE_Y(-SPEED_HIGH) &mmv MOVE_Y(SPEED_HIGH) &trans  &trans  &trans
-&trans  &trans  &trans  &mmv MOVE_X(-SPEED_MED)  &mmv MOVE_X(SPEED_MED)    &trans    &trans  &mmv MOVE_Y(-SPEED_MED) &mmv MOVE_Y(SPEED_MED) &trans  &trans  &trans
-&trans  &trans  &trans  &mmv MOVE_X(-SPEED_LOW)  &mmv MOVE_X(SPEED_LOW)    &trans    &trans  &mmv MOVE_Y(-SPEED_LOW) &mmv MOVE_Y(SPEED_LOW) &trans  &trans  &trans
+&trans  &trans  &trans  &mmv MOVE_X(-SPEED_HIGH) &mmv MOVE_X(SPEED_HIGH)   &trans    &trans  &mmv MOVE_Y(SPEED_HIGH) &mmv MOVE_Y(-SPEED_HIGH) &trans  &trans  &trans
+&trans  &trans  &trans  &mmv MOVE_X(-SPEED_MED)  &mmv MOVE_X(SPEED_MED)    &trans    &trans  &mmv MOVE_Y(SPEED_MED) &mmv MOVE_Y(-SPEED_MED) &trans  &trans  &trans
+&trans  &trans  &trans  &mmv MOVE_X(-SPEED_LOW)  &mmv MOVE_X(SPEED_LOW)    &trans    &trans  &mmv MOVE_Y(SPEED_LOW) &mmv MOVE_Y(-SPEED_LOW) &trans  &trans  &trans
                         &trans             &trans                &trans    &trans  &trans               &trans
             >;
         };
