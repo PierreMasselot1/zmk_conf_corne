@@ -11,12 +11,17 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
+#define SPEED_LOW 600;
+#define SPEED_MED 900;
+#define SPEED_HIGH 1500;
+
+
 &lt { tapping-term-ms = <175>; };
 
 / {
     behaviors {
         tp: tap_preferred {
-            compatible = "zmk,behavior-hold-tap";
+            compatible = "zmk,behavior-hold-tap"
             label = "TAP_PREFERRED";
             #binding-cells = <2>;
             tapping-term-ms = <175>;
@@ -24,35 +29,6 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-
-        mmv_low: mmv_low {
-            compatible = "zmk,behavior-input-two-axis";
-            label = "MMV_LOW";
-            #binding-cells = <1>;
-            x-input-code = <20>;
-            y-input-code = <20>;
-            time-to-max-speed-ms = <0>;
-        };
-
-        mmv_med: mmv_med {
-            compatible = "zmk,behavior-input-two-axis";
-            label = "MMV_MED";
-            #binding-cells = <1>;
-            x-input-code = <50>;
-            y-input-code = <50>;
-            time-to-max-speed-ms = <0>;
-        };
-
-        mmv_high: mmv_high {
-            compatible = "zmk,behavior-input-two-axis";
-            label = "MMV_HIGH";
-            #binding-cells = <1>;
-            x-input-code = <75>;
-            y-input-code = <75>;
-            time-to-max-speed-ms = <0>;
-        };
-
-        // Mouse movement
     };
 
     combos {
@@ -152,9 +128,9 @@
 
         mouse {
             bindings = <
-&trans  &trans  &trans  &mmv MOVE_X(-600)  &mmv_high MOVE_RIGHT  &trans    &trans  &mmv_high MOVE_DOWN  &mmv_high MOVE_UP  &trans  &trans  &trans
-&trans  &trans  &trans  &mmv MOVE_X(-400)  &mmv_med MOVE_RIGHT   &trans    &trans  &mmv_med MOVE_DOWN   &mmv_med MOVE_UP   &trans  &trans  &trans
-&trans  &trans  &trans  &mmv MOVE_X(-200)  &mmv_low MOVE_RIGHT   &trans    &trans  &mmv_low MOVE_DOWN   &mmv_low MOVE_UP   &trans  &trans  &trans
+&trans  &trans  &trans  &mmv MOVE_X(-SPEED_HIGH) &mmv MOVE_X(SPEED_HIGH)   &trans    &trans  &mmv MOVE_Y(-SPEED_HIGH) &mmv MOVE_Y(SPEED_HIGH) &trans  &trans  &trans
+&trans  &trans  &trans  &mmv MOVE_X(-SPEED_MED)  &mmv MOVE_X(SPEED_MED)    &trans    &trans  &mmv MOVE_Y(-SPEED_MED) &mmv MOVE_Y(SPEED_MED) &trans  &trans  &trans
+&trans  &trans  &trans  &mmv MOVE_X(-SPEED_LOW)  &mmv MOVE_X(SPEED_LOW)    &trans    &trans  &mmv MOVE_Y(-SPEED_LOW) &mmv MOVE_Y(SPEED_LOW) &trans  &trans  &trans
                         &trans             &trans                &trans    &trans  &trans               &trans
             >;
         };
