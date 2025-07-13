@@ -29,7 +29,7 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-        &mmv {
+        mmv: mouse_move {
             x-input-code = <INPUT_REL_X>;
             y-input-code = <INPUT_REL_Y>;
             time-to-max-speed-ms = <0>;
