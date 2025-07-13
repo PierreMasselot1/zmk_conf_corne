@@ -11,9 +11,9 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#define SPEED_LOW 600;
-#define SPEED_MED 900;
-#define SPEED_HIGH 1500;
+#define SPEED_LOW 600
+#define SPEED_MED 900
+#define SPEED_HIGH 1500
 
 
 &lt { tapping-term-ms = <175>; };
