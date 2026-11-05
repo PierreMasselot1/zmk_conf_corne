@@ -15,7 +15,6 @@
 #define SPEED_MED 1500
 #define SPEED_HIGH 2500
 
-
 &lt { tapping-term-ms = <175>; };
 
 / {
@@ -29,6 +28,7 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
         mmv: mouse_move {
             x-input-code = <INPUT_REL_X>;
             y-input-code = <INPUT_REL_Y>;
@@ -64,6 +64,11 @@
             bindings = <&out OUT_USB>;
             key-positions = <12 23>;
         };
+
+        numpad_single_handed {
+            bindings = <&mo 1>;
+            key-positions = <37 38>;
+        };
     };
 
     keymap {
@@ -84,7 +89,7 @@
             >;
         };
 
-        layer_above {
+        numpad_arrow {
             // -----------------------------------------------------------------------------------------
             // |       |  F1  |  F2  |  F3  |  F4  |  F5 |            |  F6  |  F7  |  F8  |  F9  |  F10  |   |
             // |       | Prev | Next | Vol - | Vol + | Play/Pause |   |      | LFT | DWN |  UP | RGT |     |     |
@@ -92,10 +97,10 @@
             //                    |     |     |    |                  |     |     |     |
 
             bindings = <
-&trans  &trans  &kp N7        &kp N8        &kp N9        &trans     &trans    &trans         &trans        &trans     &trans  &trans
-&trans  &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans     &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans  &trans
-&trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans     &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &trans  &trans
-                              &trans        &kp NUMBER_0  &kp DEL    &trans    &trans         &trans
+&trans  &trans  &kp N7        &kp N8           &kp N9        &trans     &trans    &trans         &trans        &trans     &trans  &trans
+&trans  &trans  &kp NUMBER_4  &kp N5           &kp NUMBER_6  &trans     &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans  &trans
+&trans  &trans  &kp NUMBER_1  &kp NUMBER_2     &kp NUMBER_3  &trans     &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &trans  &trans
+                              &kp KP_NUMBER_0  &kp NUMBER_0  &kp DEL    &trans    &trans         &trans
             >;
         };
 
@@ -134,10 +139,10 @@
 
         mouse {
             bindings = <
-&trans  &trans  &trans  &mmv MOVE_X(-SPEED_HIGH) &mmv MOVE_X(SPEED_HIGH)   &trans    &mmv MOVE_X(-SPEED_HIGH) &mmv MOVE_Y(SPEED_HIGH) &mmv MOVE_Y(-SPEED_HIGH) &mmv MOVE_X(SPEED_HIGH) &trans  &trans
-&trans  &trans  &trans  &mmv MOVE_X(-SPEED_MED)  &mmv MOVE_X(SPEED_MED)    &trans    &mmv MOVE_X(-SPEED_MED)  &mmv MOVE_Y(SPEED_MED) &mmv MOVE_Y(-SPEED_MED)   &mmv MOVE_X(SPEED_MED)  &trans  &trans
-&trans  &trans  &trans  &mmv MOVE_X(-SPEED_LOW)  &mmv MOVE_X(SPEED_LOW)    &trans    &mmv MOVE_X(-SPEED_LOW)  &mmv MOVE_Y(SPEED_LOW) &mmv MOVE_Y(-SPEED_LOW)   &mmv MOVE_X(SPEED_LOW)  &trans  &trans
-                        &mkp LCLK                &trans                    &mkp RCLK &trans  &trans                 &trans
+&trans  &trans  &trans  &mmv MOVE_X(-SPEED_HIGH)  &mmv MOVE_X(SPEED_HIGH)  &trans       &mmv MOVE_X(-SPEED_HIGH)  &mmv MOVE_Y(SPEED_HIGH)  &mmv MOVE_Y(-SPEED_HIGH)  &mmv MOVE_X(SPEED_HIGH)  &trans  &trans
+&trans  &trans  &trans  &mmv MOVE_X(-SPEED_MED)   &mmv MOVE_X(SPEED_MED)   &trans       &mmv MOVE_X(-SPEED_MED)   &mmv MOVE_Y(SPEED_MED)   &mmv MOVE_Y(-SPEED_MED)   &mmv MOVE_X(SPEED_MED)   &trans  &trans
+&trans  &trans  &trans  &mmv MOVE_X(-SPEED_LOW)   &mmv MOVE_X(SPEED_LOW)   &trans       &mmv MOVE_X(-SPEED_LOW)   &mmv MOVE_Y(SPEED_LOW)   &mmv MOVE_Y(-SPEED_LOW)   &mmv MOVE_X(SPEED_LOW)   &trans  &trans
+                        &mkp LCLK                 &trans                   &mkp RCLK    &trans                    &trans                   &trans
             >;
         };
     };
